@@ -8,7 +8,7 @@ LOGGER = logging.getLogger(__name__)
 
 class CORBehavioralDemoService(BehavioralDemoService):
     """
-    Class for demonstrating the mediator pattern.
+    Class for demonstrating the chain-of-responsibility pattern.
     """
 
     _json_handler: JSONHandler = None
@@ -20,7 +20,7 @@ class CORBehavioralDemoService(BehavioralDemoService):
         Private method for creating handler objects and setting the handler chain.
         """
 
-        LOGGER.info('Creating mediator and its components...')
+        LOGGER.info('Creating handlers...')
         self._json_handler = JSONHandler()
         self._xml_handler = XMLHandler()
         self._yaml_handler = YAMLHandler()
@@ -47,9 +47,9 @@ class CORBehavioralDemoService(BehavioralDemoService):
 
     def execute(self) -> None:
         """
-        Method for executing the demo routine of the mediator pattern.
+        Method for executing the demo routine of the chain-of-responsibility pattern.
           - Creates the handlers and set the handler chain.
-          - Do component calls through the mediator.
+          - Do handling chain.
         """
 
         LOGGER.info('Executing demo routine...')
