@@ -3,6 +3,7 @@ from typing import List, Dict
 
 from behavioral.mediator import MediatorBehavioralDemoService
 from behavioral.observer import ObserverBehavioralDemoService
+from behavioral.cor import CORBehavioralDemoService
 from creational.factory_method import FactoryMethodBehavioralDemoService
 
 logging.basicConfig(level=logging.DEBUG)
@@ -16,7 +17,8 @@ def _build_demo_list() -> List[Dict]:
     """
 
     _demos = list()
-    services = [FactoryMethodBehavioralDemoService(), ObserverBehavioralDemoService(), MediatorBehavioralDemoService()]
+    services = [FactoryMethodBehavioralDemoService(), CORBehavioralDemoService(), ObserverBehavioralDemoService(),
+                MediatorBehavioralDemoService()]
 
     for x in range(0, len(services)):
         _demo = dict(idx=str(x+1), svc=services[x])
@@ -64,9 +66,9 @@ if __name__ == '__main__':
         print('No demo found for given number.')
 
     else:
-        retrigger = True
+        re_trigger = True
 
-        while retrigger:
+        while re_trigger:
             svc = demo['svc']
             print(f'Demo for {svc.__module__} selected. Executing...')
             svc.execute()
@@ -74,6 +76,6 @@ if __name__ == '__main__':
             ans_2 = input('Re-trigger? (Y/n): ')
 
             if ans_2.lower() not in ['y', 'yes', '']:
-                retrigger = False
+                re_trigger = False
 
     print('Finished.')
