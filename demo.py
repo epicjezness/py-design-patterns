@@ -6,6 +6,7 @@ from behavioral.mediator import MediatorBehavioralDemoService
 from behavioral.observer import ObserverBehavioralDemoService
 from creational.factory_method import FactoryMethodBehavioralDemoService
 from structural.adapter import AdapterBehavioralDemoService
+from structural.facade import FacadeBehavioralDemoService
 
 logging.basicConfig(level=logging.DEBUG)
 
@@ -18,8 +19,8 @@ def _build_demo_list() -> List[Dict]:
     """
 
     _demos = list()
-    services = [FactoryMethodBehavioralDemoService(), AdapterBehavioralDemoService(), CORBehavioralDemoService(),
-                ObserverBehavioralDemoService(), MediatorBehavioralDemoService()]
+    services = [FactoryMethodBehavioralDemoService(), AdapterBehavioralDemoService(), FacadeBehavioralDemoService(),
+                CORBehavioralDemoService(), ObserverBehavioralDemoService(), MediatorBehavioralDemoService()]
 
     for x in range(0, len(services)):
         _demo = dict(idx=str(x+1), svc=services[x])
