@@ -1,1 +1,1 @@
-from .service import FacadeBehavioralDemoService
+from .service import FacadeStructuralDemoService

@@ -1,1 +1,1 @@
-from .service import AdapterBehavioralDemoService
+from .service import AdapterStructuralDemoService

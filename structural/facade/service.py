@@ -6,7 +6,7 @@ from ..base import StructuralDemoService
 LOGGER = logging.getLogger(__name__)
 
 
-class FacadeBehavioralDemoService(StructuralDemoService):
+class FacadeStructuralDemoService(StructuralDemoService):
     """
     Class for demonstrating the facade pattern.
     """

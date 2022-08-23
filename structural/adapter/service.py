@@ -7,7 +7,7 @@ from ..base import StructuralDemoService
 LOGGER = logging.getLogger(__name__)
 
 
-class AdapterBehavioralDemoService(StructuralDemoService):
+class AdapterStructuralDemoService(StructuralDemoService):
     """
     Class for demonstrating the adapter pattern.
     """
