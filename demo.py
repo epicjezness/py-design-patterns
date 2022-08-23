@@ -5,6 +5,7 @@ from behavioral.cor import CORBehavioralDemoService
 from behavioral.mediator import MediatorBehavioralDemoService
 from behavioral.observer import ObserverBehavioralDemoService
 from creational.factory_method import FactoryMethodCreationalDemoService
+from creational.singleton import SingletonCreationalDemoService
 from structural.adapter import AdapterBehavioralDemoService
 from structural.facade import FacadeBehavioralDemoService
 
@@ -19,8 +20,9 @@ def _build_demo_list() -> List[Dict]:
     """
 
     _demos = list()
-    services = [FactoryMethodCreationalDemoService(), AdapterBehavioralDemoService(), FacadeBehavioralDemoService(),
-                CORBehavioralDemoService(), ObserverBehavioralDemoService(), MediatorBehavioralDemoService()]
+    services = [FactoryMethodCreationalDemoService(),  SingletonCreationalDemoService(), AdapterBehavioralDemoService(),
+                FacadeBehavioralDemoService(), CORBehavioralDemoService(), ObserverBehavioralDemoService(),
+                MediatorBehavioralDemoService()]
 
     for x in range(0, len(services)):
         _demo = dict(idx=str(x+1), svc=services[x])
