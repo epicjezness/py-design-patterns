@@ -1,1 +1,1 @@
-from .service import FactoryMethodBehavioralDemoService
+from .service import FactoryMethodCreationalDemoService

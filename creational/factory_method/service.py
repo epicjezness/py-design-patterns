@@ -7,7 +7,7 @@ from ..base import CreationalDemoService
 LOGGER = logging.getLogger(__name__)
 
 
-class FactoryMethodBehavioralDemoService(CreationalDemoService):
+class FactoryMethodCreationalDemoService(CreationalDemoService):
     """
     Class for demonstrating the factory method pattern.
     """

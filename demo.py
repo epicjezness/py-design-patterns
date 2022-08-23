@@ -4,7 +4,7 @@ from typing import List, Dict
 from behavioral.cor import CORBehavioralDemoService
 from behavioral.mediator import MediatorBehavioralDemoService
 from behavioral.observer import ObserverBehavioralDemoService
-from creational.factory_method import FactoryMethodBehavioralDemoService
+from creational.factory_method import FactoryMethodCreationalDemoService
 from structural.adapter import AdapterBehavioralDemoService
 from structural.facade import FacadeBehavioralDemoService
 
@@ -19,7 +19,7 @@ def _build_demo_list() -> List[Dict]:
     """
 
     _demos = list()
-    services = [FactoryMethodBehavioralDemoService(), AdapterBehavioralDemoService(), FacadeBehavioralDemoService(),
+    services = [FactoryMethodCreationalDemoService(), AdapterBehavioralDemoService(), FacadeBehavioralDemoService(),
                 CORBehavioralDemoService(), ObserverBehavioralDemoService(), MediatorBehavioralDemoService()]
 
     for x in range(0, len(services)):
